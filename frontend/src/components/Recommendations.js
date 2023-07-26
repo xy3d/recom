@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Box from '@mui/material/Box';
+import './Recommendations.css'; // Import the CSS file
 
 const Recommendations = ({ userId }) => {
   const [recommendations, setRecommendations] = useState([]);
@@ -22,7 +23,7 @@ const Recommendations = ({ userId }) => {
   }, [fetchRecommendations]);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 16 }}>
+    <Box className="RecommendationList">
       <h2>Recommendations</h2>
       <ul>
         {recommendations.map((recommendation) => (
