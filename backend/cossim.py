@@ -74,7 +74,7 @@ def get_user_recommendations(user_id, order_data):
     recommendations = sorted(recommendations, key=lambda x: x[2], reverse=True)
 
     # Return the top N recommended product IDs and product names
-    top_n = 5  # You can change this value to get more or fewer recommendations
+    top_n = 5
     top_recommendations = [{'product_id': pid, 'product_name': pname} for pid, pname, _ in recommendations[:top_n]]
     return top_recommendations
 
